@@ -1,0 +1,53 @@
+.sidebar{
+    background-color: #ECF2F7;
+    background-size: cover;
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    box-shadow: 2px 4px 4px 4px #D8E0E6;
+    border-radius: 10px;
+}
+.sidebar-info{
+    text-align: center;
+}
+.user-card{
+    background-color: white;
+    padding-top: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px 4px #D8E0E6;
+}
+.feedback-card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px 4px #D8E0E6;
+}
+.feedback-card button{
+    background-color: #93E6C4;
+    width: 100%;
+    padding: 10px 5px 10px 5px;
+    border: none;
+    box-shadow: 1px 2px 2px 2px #D8E0E6;
+    border-radius: 5px;
+
+}
+.toggle-card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px 4px #D8E0E6;
+    
+}
+.toggle-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D8E0E6;
+    width: 20%;
+    height: 30px;
+    margin-left: 40%;
+    padding: 20 20px 20px 20px;
+}
+.icon{
+    padding: 10px 20px 10px 20px;
+    border: none;
+}
