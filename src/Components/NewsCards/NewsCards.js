@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import NewsCardGrid from '../NewsCardGrid/NewsCardGrid';
+import NewsCardList from '../NewsCardList/NewsCardList';
+import Sidebar from '../Sidebar/Sidebar';
 
 const NewsCards = () => {
     const [newsCards, setNewsCards] = useState([]);
+    const {style} = useParams();
+    console.log(style);
 
     useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/posts')
@@ -12,9 +18,29 @@ const NewsCards = () => {
     console.log(newsCards);
 
     return (
-        <div>
-            <h2>News Card</h2>
-        </div>
+        <div className='row home-page'>
+            <div className='col-md-3 sidebar'>
+                <Sidebar/>
+            </div>
+
+            {
+                style === 'grid' && 
+                <div className='col-md-9 news-card' style={{position:'absolute', right:0}}>
+                {
+                    newsCards.map(newsCard => <NewsCardGrid newsCard={newsCard} key={newsCard.id}></NewsCardGrid>)
+                }
+                </div>         
+            }
+            {
+                style === 'list' && 
+                <div className='col-md-9 news-card my-4' style={{position:'absolute', right:0}}>
+                {
+                    newsCards.map(newsCard => <NewsCardList newsCard={newsCard} key={newsCard.id}></NewsCardList>)
+                }
+                </div> 
+            }
+            
+        </div>     
     );
 };
 

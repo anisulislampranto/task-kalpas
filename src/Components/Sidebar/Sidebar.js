@@ -2,6 +2,7 @@ import React from 'react';
 import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faTh, faThList } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     return (
@@ -16,12 +17,16 @@ const Sidebar = () => {
             <div className='toggle-card my-3 py-3'>
                 <h3><strong>View Toggle</strong></h3>
                 <div className='toggle-icon my-4'>
-                        <button style={{borderRadius: '5px 0px 0px 5px'}} className='icon' > 
-                            <FontAwesomeIcon icon={faTh} />
-                        </button>
-                        <button style={{borderRadius: '0px 5px 5px 0px'}} className='icon' > 
-                            <FontAwesomeIcon icon={faThList} />
-                        </button>
+                        <Link to={'/news/grid'}>
+                            <button style={{borderRadius: '5px 0px 0px 5px'}} className='icon' > 
+                                <FontAwesomeIcon icon={faTh} />
+                            </button>
+                        </Link>
+                        <Link to={'/news/list '}>
+                            <button style={{borderRadius: '0px 5px 5px 0px'}} className='icon' > 
+                                <FontAwesomeIcon icon={faThList} />
+                            </button>
+                        </Link>
                 </div>
             </div>
             <div className='feedback-card py-4 px-4'>
@@ -31,5 +36,6 @@ const Sidebar = () => {
         </div>
     );
 };
+
 
 export default Sidebar;
