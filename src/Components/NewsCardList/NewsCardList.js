@@ -8,10 +8,10 @@ const NewsCardList = (props) => {
     return (
         <div className='d-flex container list-card'>
             <div className='list'>
-                <h3><strong>{title}</strong></h3>
+                <h6><strong>{title}</strong></h6>
                 <p>{body}</p>
             </div>
-            <button className='delete-btn'> <FontAwesomeIcon icon={faTimesCircle} /> </button>
+            <button className='delete-btn-list'> <FontAwesomeIcon icon={faTimesCircle} /> </button>
         </div>
         
     );

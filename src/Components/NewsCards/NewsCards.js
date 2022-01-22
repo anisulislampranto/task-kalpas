@@ -25,7 +25,7 @@ const NewsCards = () => {
 
             {
                 style === 'grid' && 
-                <div className='col-md-9 news-card' style={{position:'absolute', right:0}}>
+                <div className='container col-md-9 news-card my-4 row' style={{position:'absolute', right:0}}>
                 {
                     newsCards.map(newsCard => <NewsCardGrid newsCard={newsCard} key={newsCard.id}></NewsCardGrid>)
                 }
@@ -33,7 +33,7 @@ const NewsCards = () => {
             }
             {
                 style === 'list' && 
-                <div className='col-md-9 news-card my-4' style={{position:'absolute', right:0}}>
+                <div className=' container col-md-9 news-card my-4' style={{position:'absolute', right:0}}>
                 {
                     newsCards.map(newsCard => <NewsCardList newsCard={newsCard} key={newsCard.id}></NewsCardList>)
                 }

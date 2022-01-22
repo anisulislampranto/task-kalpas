@@ -1,0 +1,17 @@
+.grid-card{
+    box-shadow: 2px 4px 4px 4px #D8E0E6;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 50px;
+    margin-top: 10px;
+
+}
+.delete-btn-grid{
+    background: transparent;
+    border: none;
+    font-size:xx-large;
+    color: #FD8F8F;
+    height: 50px;
+    
+}
